@@ -1,0 +1,9 @@
+<h1>Hello, World!</h1>
+
+<ul>
+  <% if @articles.any? %>
+    <% @articles.each do |article| %>
+      <li>Article title: <%= article.title %>, Author: <%= article.author.email %>, Content: <%= article.body %></li>
+    <% end %>
+  <% end %>
+</ul>

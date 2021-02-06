@@ -1,0 +1,19 @@
+<div class="container d-flex align-items-center flex-column">
+  <h2 class="mb-3">Create a new article</h2>
+
+    <%= form_with(model: [@author, @article], class:'w-75') do |f| %>
+      <div class="mb-3 w-100">
+        <%= f.label :title, class: 'form-label' %><br />
+        <%= f.text_field :title, autofocus: true, autocomplete: "title", class: 'form-control' %>
+      </div>
+
+      <div class="mb-3 w-100">
+        <%= f.label 'Content', class: 'form-label' %><br />
+        <%= f.text_area(:body, rows: 8, class:'form-control') %>
+      </div>
+
+      <div class="actions w-100 text-center">
+        <%= f.submit "CREATE ARTICLE", class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+</div>

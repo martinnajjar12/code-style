@@ -3,7 +3,10 @@
 <ul>
   <% if @articles.any? %>
     <% @articles.each do |article| %>
-      <li>Article title: <%= article.title %>, Author: <%= article.author.email %>, Content: <%= article.body %></li>
+      <li>Article title: <%= article.title %>, Author: <%= article.author.email %>, Content: <%= article.body %>,
+                  Categories: <% article.categories.each do |cat| %>
+                                <%= cat.name %>
+                              <% end %></li>
     <% end %>
   <% end %>
 </ul>

@@ -12,6 +12,11 @@
         <%= f.text_area(:body, rows: 8, class:'form-control') %>
       </div>
 
+      <div class="mb-3 w-100">
+        <%= f.label 'Categories', class: 'form-label' %><br />
+        <%= f.text_field :article_categories, autocomplete: 'category', class: 'form-control' %>
+      </div>
+
       <div class="actions w-100 text-center">
         <%= f.submit "CREATE ARTICLE", class: 'btn btn-primary' %>
       </div>
